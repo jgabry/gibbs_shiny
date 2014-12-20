@@ -4,9 +4,11 @@ library(RColorBrewer)
 library(KernSmooth)
 
 gibbs_sampler <- function(N, init1, init2) {
+  # for multivariate normal distribution with mean vector c(1,2) and covariance
+  # matrix = matrix(c(1, 1/2, 1/2, 1), 2, 2)
   
-  if (missing(init1)) init1 <- runif(1, -4, 4) # init1 <- 4
-  if (missing(init2)) init2 <- runif(1, -2, 6) # init2 <- 6
+  if (missing(init1)) init1 <- runif(1, -4, 4) 
+  if (missing(init2)) init2 <- runif(1, -2, 6) 
   
   draws <- mat.or.vec(nr = N, nc = 2)
   x_1 <- init1 ; x_2 <- init2  

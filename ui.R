@@ -1,5 +1,7 @@
-
 library(shiny)
+library(ggplot2)
+library(RColorBrewer)
+library(KernSmooth)
 
 shinyUI(fluidPage(  theme = "flatly.css",
   wellPanel(style = "padding: 2px; border-bottom: 3px solid #CCC;", 
