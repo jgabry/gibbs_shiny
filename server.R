@@ -75,7 +75,6 @@ shinyServer(function(input, output) {
                pch=19)
       })
     }
-#     text(xx[1],yy[1], labels = "initial values")
     points(xx[1], yy[1], col = "purple", cex = 1)
     axis(1, lwd = 6, lwd.ticks = 0, padj = -1)
     axis(2, lwd = 6, lwd.ticks = 0, padj = 1)
@@ -120,8 +119,6 @@ shinyServer(function(input, output) {
     Z <- bkde2D(cbind(X, Y), bandwidth = c(bw.nrd0(X), bw.nrd0(Y)))
     
     contour(Z$x1, Z$x2, Z$fhat, main = "Joint Distribution", bty = "l", axes = FALSE)
-#     axis(1, lwd = 4)
-#     axis(2, lwd = 4)
   })
 
   output$marginal_and_joint_plots <- renderPlot({
@@ -136,6 +133,5 @@ shinyServer(function(input, output) {
       plot(0, type = "n", axes = FALSE, xlab = "", ylab = "", main = "Joint Distribution")
     }
   })
-  #, bg = "#F5F5F5")
   
 })
