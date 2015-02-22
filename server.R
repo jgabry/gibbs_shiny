@@ -23,10 +23,6 @@ gibbs_sampler <- function(N, init1, init2) {
   draws
 }
 
-# nDraws <- 1e4
-# draws <- gibbs_sampler(N = nDraws)
-# xx <- draws[, 1]
-# yy <- draws[, 2]
 
 shinyServer(function(input, output) {
   
